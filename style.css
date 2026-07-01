@@ -1,0 +1,213 @@
+ @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tirra:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tirra:wght@400;500;600;700;800;900&family=Varela+Round&display=swap');
+
+body{
+    background-color: antiquewhite;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+
+}
+nav{
+     
+    font-family: 'ubuntu',sans-serif;
+    font-family: "Tirra", cursive;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 55px;
+    background-color: black;
+    color: white;
+}
+nav ul li{
+    padding: 0 15px;
+}
+.brand img{
+    width: 90px;
+     margin-left: -20px;  
+    padding: 0 2px;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: x-large;
+}
+.container{
+    min-height: 72vh;
+    background-color: black; 
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    width: 70%; 
+    margin: 23px auto;
+    border-radius: 12px;
+    padding: 33px;
+    background-image: url('bg.jpeg');
+    background-size: cover;
+    background-position: center;
+
+
+}
+.bottom{
+    position: sticky;
+    height: 130px;
+    background-color: black;
+    color: white ;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    
+}
+.icons{
+    margin-top: 15px;
+    font-size: 32px; 
+    
+}
+.icons i{
+    cursor: pointer;
+}
+.icons i:hover{
+    color: red;
+    font-size: 35px; 
+}
+#masterPlay{
+    font-size: 32px;
+}
+#myProgressBar{
+    width: 103vh;
+    text-align: center;
+    cursor: pointer;
+
+}
+.songItemcontainer{
+    margin-top:44px ;
+}
+.songItem{
+    height: 40px;
+    display: flex;
+    background-color: white;
+     width: 60%; 
+    color: Black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px ;
+
+}
+.songItem img{
+    width: 33px;
+    margin: 0 13px ;
+    border-radius: 50px;
+
+}
+.songlistplay{
+    margin: 0 23px;
+    
+    
+}
+.songlistplay i{
+    cursor: pointer;
+    
+}
+
+.songinfo{
+    position: absolute;
+    left: 0vw;
+    font-size: 13px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.songinfo img{
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+     /* transition-delay: 1s;  */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .bottom #currentTime{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+} 
+#currentTime{
+    color: white;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* --- MOBILE RESPONSIVE STYLES --- */
+@media only screen and (max-width: 768px) {
+    /* 1. Main container ki width mobile ke hisab se set karein */
+    .container {
+        width: 95vw;
+        margin: 10px auto;
+        padding: 15px;
+        min-height: 70vh;
+    }
+
+    /* 2. Gaano ki list ko poori jagah dein */
+    .songItemContainer {
+        width: 100%;
+    }
+
+    /* 3. Gaane ke andar ke elements (text aur play icon) ko wrap karein */
+    .songItem {
+        width: 100%;
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .songName {
+        max-width: 50%; /* Mobile me naam lamba ho toh screen se baahar na jaye */
+    }
+
+    /* 4. Jo right side me badi waali background/cover image hai use hide karein */
+    .songBanner {
+        display: none !important;
+    }
+
+    /* 5. Bottom play bar (seekbar aur buttons) ko responsive banayein */
+    .bottom {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        height: auto;
+    }
+
+    #myProgressBar {
+        width: 90vw; /* Seekbar mobile screen ke hisab se fit ho jaye */
+    }
+
+    .icons {
+        margin-top: 5px;
+    }
+}
